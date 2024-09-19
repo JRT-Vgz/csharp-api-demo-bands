@@ -1,6 +1,35 @@
+using csharp_api_demo_bands.Automappers;
+using csharp_api_demo_bands.DTOs;
+using csharp_api_demo_bands.Models;
+using csharp_api_demo_bands.Repository;
+using csharp_api_demo_bands.Services;
+using csharp_api_demo_bands.Validators;
+using FluentValidation;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddScoped<ICommonService<StyleDto, StyleInsertDto, StyleUpdateDto>, StyleService>();
+
+
+// Repository
+builder.Services.AddScoped<IRepository<Style>, StyleRepository>();
+
+
+// Mappers
+builder.Services.AddAutoMapper(typeof(StyleMappingProfile));
+
+// Validators
+builder.Services.AddScoped<IValidator<StyleInsertDto>, StyleInsertValidator>();
+builder.Services.AddScoped<IValidator<StyleUpdateDto>, StyleUpdateValidator>();
+
+// Entity Framework
+builder.Services.AddDbContext<BandsContext>(options =>
+{
+    options.UseMySQL(builder.Configuration.GetConnectionString("BandsConnection"));
+});
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

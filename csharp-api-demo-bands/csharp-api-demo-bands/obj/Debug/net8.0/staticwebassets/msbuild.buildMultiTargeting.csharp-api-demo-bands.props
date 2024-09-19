@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\csharp-api-demo-bands.props" />
+</Project>
