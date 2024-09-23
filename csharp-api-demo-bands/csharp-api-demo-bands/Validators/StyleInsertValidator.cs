@@ -14,7 +14,7 @@ namespace csharp_api_demo_bands.Validators
                 .WithMessage("El campo 'Name' no debe superar los 25 caracteres.");
 
             RuleFor(s => s.Name.ToUpper()).Must(str => str.Contains("ROCK") || str.Contains("METAL"))
-                .WithMessage("Si no contiene 'Rock' o 'Metal' en el nombre, no es música.");
+                .WithMessage("El campo 'Name' debe contener la palabra 'Rock' o 'Metal', sino no es música.");
 
         }
     }

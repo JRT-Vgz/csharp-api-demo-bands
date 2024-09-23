@@ -11,18 +11,21 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddScoped<ICommonService<StyleDto, StyleInsertDto, StyleUpdateDto>, StyleService>();
-
+builder.Services.AddScoped<ICommonService<BandDto, BandInsertDto, BandUpdateDto>, BandService>();
 
 // Repository
 builder.Services.AddScoped<IRepository<Style>, StyleRepository>();
-
+builder.Services.AddScoped<IRepository<Band>, BandRepository>();
 
 // Mappers
 builder.Services.AddAutoMapper(typeof(StyleMappingProfile));
+//builder.Services.AddAutoMapper(typeof(BandMappingProfile));
 
 // Validators
 builder.Services.AddScoped<IValidator<StyleInsertDto>, StyleInsertValidator>();
 builder.Services.AddScoped<IValidator<StyleUpdateDto>, StyleUpdateValidator>();
+builder.Services.AddScoped<IValidator<BandInsertDto>, BandInsertValidator>();
+builder.Services.AddScoped<IValidator<BandUpdateDto>, BandUpdateValidator>();
 
 // Entity Framework
 builder.Services.AddDbContext<BandsContext>(options =>
