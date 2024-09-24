@@ -8,12 +8,15 @@ namespace csharp_api_demo_bands.Services
     public class BandService : ICommonService<BandDto, BandInsertDto, BandUpdateDto>
     {
         private IRepository<Band> _bandRepository;
+        private IRepository<Style> _styleRespository;
         private IMapper _mapper;
 
         public BandService(IRepository<Band> bandRepository,
+            IRepository<Style> styleRepository,
             IMapper mapper)
         {
             _bandRepository = bandRepository;
+            _styleRespository = styleRepository;
             _mapper = mapper;
         }
 
