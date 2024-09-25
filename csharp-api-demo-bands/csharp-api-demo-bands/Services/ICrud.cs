@@ -1,6 +1,6 @@
 ﻿namespace csharp_api_demo_bands.Services
 {
-    public interface ICommonService<TDto, TInsertDto, TUpdateDto>
+    public interface ICrud<TDto, TInsertDto, TUpdateDto>
     {
         Task<IEnumerable<TDto>> GetAll();
         Task<TDto> GetById(int id);

@@ -10,16 +10,17 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<ICommonService<StyleDto, StyleInsertDto, StyleUpdateDto>, StyleService>();
-builder.Services.AddScoped<ICommonService<BandDto, BandInsertDto, BandUpdateDto>, BandService>();
+builder.Services.AddScoped<ICrud<StyleDto, StyleInsertDto, StyleUpdateDto>, StyleService>();
+builder.Services.AddScoped<BandService>();
+builder.Services.AddScoped<ICrud<BandDto, BandInsertDto, BandUpdateDto>>(s => s.GetService<BandService>());
+builder.Services.AddScoped<ICrudValidate<BandInsertDto, BandUpdateDto>>(s => s.GetService<BandService>());
 
 // Repository
 builder.Services.AddScoped<IRepository<Style>, StyleRepository>();
 builder.Services.AddScoped<IRepository<Band>, BandRepository>();
 
 // Mappers
-builder.Services.AddAutoMapper(typeof(StyleMappingProfile));
-//builder.Services.AddAutoMapper(typeof(BandMappingProfile));
+builder.Services.AddAutoMapper(typeof(Program));
 
 // Validators
 builder.Services.AddScoped<IValidator<StyleInsertDto>, StyleInsertValidator>();

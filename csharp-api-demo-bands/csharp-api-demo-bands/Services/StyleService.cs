@@ -5,7 +5,7 @@ using csharp_api_demo_bands.Repository;
 
 namespace csharp_api_demo_bands.Services
 {
-    public class StyleService : ICommonService<StyleDto, StyleInsertDto, StyleUpdateDto>
+    public class StyleService : ICrud<StyleDto, StyleInsertDto, StyleUpdateDto>
     {
         private IRepository<Style> _styleRepository;
         private IMapper _mapper;

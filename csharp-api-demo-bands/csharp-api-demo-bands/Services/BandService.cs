@@ -5,12 +5,13 @@ using csharp_api_demo_bands.Repository;
 
 namespace csharp_api_demo_bands.Services
 {
-    public class BandService : ICommonService<BandDto, BandInsertDto, BandUpdateDto>
+    public class BandService : ICrud<BandDto, BandInsertDto, BandUpdateDto>, 
+        ICrudValidate<BandInsertDto, BandUpdateDto>
     {
         private IRepository<Band> _bandRepository;
         private IRepository<Style> _styleRespository;
         private IMapper _mapper;
-
+        public List<string> Errors { get; }
         public BandService(IRepository<Band> bandRepository,
             IRepository<Style> styleRepository,
             IMapper mapper)
@@ -18,6 +19,7 @@ namespace csharp_api_demo_bands.Services
             _bandRepository = bandRepository;
             _styleRespository = styleRepository;
             _mapper = mapper;
+            Errors = new List<string>();
         }
 
         public async Task<IEnumerable<BandDto>> GetAll()
@@ -78,5 +80,33 @@ namespace csharp_api_demo_bands.Services
 
             return bandDto;
         }
+
+        public async Task<bool> Validate(BandInsertDto bandInsertDto)
+        {
+            bool IsValid = true;
+
+            var style = await _styleRespository.GetById(bandInsertDto.StyleID);
+            if (style == null)
+            {
+                Errors.Add("El campo 'StyleID' no corresponde con ningún estilo.");
+                IsValid = false;
+            }
+
+            return IsValid;
+        }
+        public async Task<bool> Validate(BandUpdateDto bandUpdateDto)
+        {
+            bool IsValid = true;
+
+            var style = await _styleRespository.GetById(bandUpdateDto.StyleID);
+            if (style == null)
+            {
+                Errors.Add("El campo 'StyleID' no corresponde con ningún estilo.");
+                IsValid = false;
+            }
+
+            return IsValid;
+        }
+
     }
 }

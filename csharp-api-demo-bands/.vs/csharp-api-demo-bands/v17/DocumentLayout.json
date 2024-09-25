@@ -3,20 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|c:\\users\\miguel\\desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|solutionrelative:csharp-api-demo-bands\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|c:\\users\\miguel\\desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\services\\bandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|solutionrelative:csharp-api-demo-bands\\services\\bandservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|c:\\users\\miguel\\desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|solutionrelative:csharp-api-demo-bands\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|c:\\users\\miguel\\desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\controllers\\bandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{83D60D8A-1DB2-4260-800C-A213E51CBC31}|csharp-api-demo-bands\\csharp-api-demo-bands.csproj|solutionrelative:csharp-api-demo-bands\\controllers\\bandcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,49 +19,12 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\appsettings.json",
-              "RelativeDocumentMoniker": "csharp-api-demo-bands\\appsettings.json",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\appsettings.json",
-              "RelativeToolTip": "csharp-api-demo-bands\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-09-24T15:23:55.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "BandController.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\Controllers\\BandController.cs",
-              "RelativeDocumentMoniker": "csharp-api-demo-bands\\Controllers\\BandController.cs",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\Controllers\\BandController.cs",
-              "RelativeToolTip": "csharp-api-demo-bands\\Controllers\\BandController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAAACoAAABaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:11:23.458Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\Program.cs",
-              "RelativeDocumentMoniker": "csharp-api-demo-bands\\Program.cs",
-              "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\Program.cs",
-              "RelativeToolTip": "csharp-api-demo-bands\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAABhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T16:06:16.994Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "BandService.cs",
               "DocumentMoniker": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\Services\\BandService.cs",
               "RelativeDocumentMoniker": "csharp-api-demo-bands\\Services\\BandService.cs",
               "ToolTip": "C:\\Users\\Miguel\\Desktop\\csharp-api-demo-bands\\csharp-api-demo-bands\\csharp-api-demo-bands\\Services\\BandService.cs",
               "RelativeToolTip": "csharp-api-demo-bands\\Services\\BandService.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAFIAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T16:04:42.581Z",
               "EditorCaption": ""

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("csharp-api-demo-bands")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af4900d32ff28ef5f3d51f59c90122f9421749f0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bae88e89bf1bbe5ebc3dcf761ad25ca862e2251d")]
 [assembly: System.Reflection.AssemblyProductAttribute("csharp-api-demo-bands")]
 [assembly: System.Reflection.AssemblyTitleAttribute("csharp-api-demo-bands")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

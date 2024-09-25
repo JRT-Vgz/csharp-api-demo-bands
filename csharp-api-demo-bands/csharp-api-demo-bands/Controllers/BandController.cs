@@ -11,11 +11,11 @@ namespace csharp_api_demo_bands.Controllers
     [ApiController]
     public class BandController : ControllerBase
     {
-        private ICommonService<BandDto, BandInsertDto, BandUpdateDto> _bandService;
+        private BandService _bandService;
         private IValidator<BandInsertDto> _bandInsertValidator;
         private IValidator<BandUpdateDto> _bandUpdateValidator;
 
-        public BandController(ICommonService<BandDto, BandInsertDto, BandUpdateDto> bandService,
+        public BandController(BandService bandService,
             IValidator<BandInsertDto> bandInsertValidator,
             IValidator<BandUpdateDto> bandUpdateValidator)
         {
@@ -39,8 +39,11 @@ namespace csharp_api_demo_bands.Controllers
         [HttpPost]
         public async Task<ActionResult<BandDto>> Insert(BandInsertDto bandInsertDto)
         {
-            var validationResult = _bandInsertValidator.Validate(bandInsertDto);
-            if (!validationResult.IsValid) { return BadRequest(validationResult.Errors); }
+            var formValidation = _bandInsertValidator.Validate(bandInsertDto);
+            if (!formValidation.IsValid) { return BadRequest(formValidation.Errors); }
+
+            var serviceValidation = await _bandService.Validate(bandInsertDto);
+            if (!serviceValidation) { return BadRequest(_bandService.Errors); }
 
             var bandDto = await _bandService.Insert(bandInsertDto);
 
@@ -50,8 +53,11 @@ namespace csharp_api_demo_bands.Controllers
         [HttpPut("{id}")]
         public async Task<ActionResult<BandDto>> Update(BandUpdateDto bandUpdateDto, int id)
         {
-            var validationResult = _bandUpdateValidator.Validate(bandUpdateDto);
-            if (!validationResult.IsValid) { return BadRequest(validationResult.Errors); }
+            var formValidation = _bandUpdateValidator.Validate(bandUpdateDto);
+            if (!formValidation.IsValid) { return BadRequest(formValidation.Errors); }
+
+            var serviceValidation = await _bandService.Validate(bandUpdateDto);
+            if (!serviceValidation) { return BadRequest(_bandService.Errors); }
 
             var bandDto = await _bandService.Update(bandUpdateDto, id);
 
