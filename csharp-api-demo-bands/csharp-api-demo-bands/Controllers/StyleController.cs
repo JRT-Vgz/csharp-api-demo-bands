@@ -12,11 +12,11 @@ namespace csharp_api_demo_bands.Controllers
     [ApiController]
     public class StyleController : ControllerBase
     {
-        private ICrud<StyleDto, StyleInsertDto, StyleUpdateDto> _styleService;
+        private ICommonService<StyleDto, StyleInsertDto, StyleUpdateDto> _styleService;
         private IValidator<StyleInsertDto> _styleInsertValidator;
         private IValidator<StyleUpdateDto> _styleUpdateValidator;
 
-        public StyleController(ICrud<StyleDto, StyleInsertDto, StyleUpdateDto> styleService,
+        public StyleController(ICommonService<StyleDto, StyleInsertDto, StyleUpdateDto> styleService,
             IValidator<StyleInsertDto> styleInsertValidator,
             IValidator<StyleUpdateDto> styleUpdateValidator)
         {

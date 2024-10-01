@@ -3,7 +3,7 @@ using System.Configuration;
 
 namespace csharp_api_demo_bands.Services
 {
-    public interface ICrudValidate<TInsertDto, TUpdateDto>
+    public interface ICommonServiceValidate<TInsertDto, TUpdateDto>
     {
         public List<string> Errors { get; }
         Task<bool> Validate(TInsertDto inserDto);

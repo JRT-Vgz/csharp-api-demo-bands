@@ -10,10 +10,10 @@ using Microsoft.EntityFrameworkCore;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddScoped<ICrud<StyleDto, StyleInsertDto, StyleUpdateDto>, StyleService>();
+builder.Services.AddScoped<ICommonService<StyleDto, StyleInsertDto, StyleUpdateDto>, StyleService>();
 builder.Services.AddScoped<BandService>();
-builder.Services.AddScoped<ICrud<BandDto, BandInsertDto, BandUpdateDto>>(s => s.GetService<BandService>());
-builder.Services.AddScoped<ICrudValidate<BandInsertDto, BandUpdateDto>>(s => s.GetService<BandService>());
+builder.Services.AddScoped<ICommonService<BandDto, BandInsertDto, BandUpdateDto>>(s => s.GetService<BandService>());
+builder.Services.AddScoped<ICommonServiceValidate<BandInsertDto, BandUpdateDto>>(s => s.GetService<BandService>());
 
 // Repository
 builder.Services.AddScoped<IRepository<Style>, StyleRepository>();

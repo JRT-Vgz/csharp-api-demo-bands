@@ -5,8 +5,8 @@ using csharp_api_demo_bands.Repository;
 
 namespace csharp_api_demo_bands.Services
 {
-    public class BandService : ICrud<BandDto, BandInsertDto, BandUpdateDto>, 
-        ICrudValidate<BandInsertDto, BandUpdateDto>
+    public class BandService : ICommonService<BandDto, BandInsertDto, BandUpdateDto>, 
+        ICommonServiceValidate<BandInsertDto, BandUpdateDto>
     {
         private IRepository<Band> _bandRepository;
         private IRepository<Style> _styleRespository;
